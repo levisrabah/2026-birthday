@@ -1,4 +1,4 @@
-# Happy Birthday Celebration Animation
+# Happy Birthday Levis (10th April,2026 )
 This project is a simple web page that creates a birthday celebration animation using HTML, CSS and JavaScript.
 
 ## Overview
@@ -17,10 +17,3 @@ HTML
 CSS
 JavaScript (jQuery)
 Getting Started
-Clone this repository:
-
-Website - [Happy Birthday](https://github.com/nafisalawalidris/Happy-Birthday.git)
-
-An easy to deploy, Happy Birthday animation design TEMPLATE.
-
-View Deployments [here]([https://github.com/Rishabh04-02/happy-birthday/deployments])
