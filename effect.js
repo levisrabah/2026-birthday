@@ -13,7 +13,7 @@ $(document).ready(function(){
 		var maxSpread = Math.min(winW - balloonW - 12, 640);
 		var step = maxSpread / 6;
 		var startLeft = (winW - maxSpread - balloonW) / 2;
-		var targetTop = isMobile ? 96 : 148;
+		var targetTop = isMobile ? 112 : 155;
 
 		var ids = ['#b11', '#b22', '#b33', '#b44', '#b55', '#b66', '#b77'];
 		for (var idx = 0; idx < ids.length; idx++) {
@@ -51,7 +51,7 @@ $(document).ready(function(){
 			navigator.mediaSession.metadata = new MediaMetadata({
 				title: 'Happy 21st Birthday Abby',
 				artist: 'Chapter 21',
-				artwork: [{ src: 'Images/Abbie.jpeg', sizes: '512x512', type: 'image/jpeg' }]
+				artwork: [{ src: 'Images/cake128.png', sizes: '128x128', type: 'image/png' }]
 			});
 		}
 		$('#bulb_yellow').addClass('bulb-glow-yellow-after');
@@ -139,7 +139,9 @@ $(document).ready(function(){
 	$('#story').click(function(){
 		$(this).fadeOut('slow');
 		$('.cake-cover').fadeOut('fast').promise().done(function(){
-			$('.message').fadeIn('slow');
+			$('.message').fadeIn('slow', function(){
+				$('html, body').animate({ scrollTop: $('.message').offset().top - 20 }, 500);
+			});
 		});
 
 		var $bubbles = $('.sms-bubble');
