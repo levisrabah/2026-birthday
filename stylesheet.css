@@ -457,7 +457,7 @@ audio {
 }
 
 .celebrate-img {
-	display: block !important;
+	
 	position: relative;
 	z-index: 2;
 	width: 100%;
@@ -649,7 +649,7 @@ audio {
 }
 
 .sms-bubble p {
-	display: block !important;
+	
 	text-align: left;
 	margin: 0;
 	font-size: 17px;
