@@ -39,7 +39,7 @@ $(document).ready(function(){
 		$('#bulb_orange').addClass('bulb-glow-orange');
 		$('body').addClass('peach');
 		$('.celebrate-img').fadeIn(1500);
-		$(this).fadeOut('slow').delay(4000).promise().done(function(){
+		$(this).fadeOut('slow').delay(1200).promise().done(function(){
 			$('#play').fadeIn('slow');
 		});
 	});
@@ -62,14 +62,14 @@ $(document).ready(function(){
 		$('#bulb_orange').addClass('bulb-glow-orange-after');
 		$('body').css('background-color', '#FFF');
 		$('body').addClass('peach-after');
-		$(this).fadeOut('slow').delay(5000).promise().done(function(){
+		$(this).fadeOut('slow').delay(1000).promise().done(function(){
 			$('#bannar_coming').fadeIn('slow');
 		});
 	});
 
 	$('#bannar_coming').click(function(){
 		$('.bannar').addClass('bannar-come');
-		$(this).fadeOut('slow').delay(5000).promise().done(function(){
+		$(this).fadeOut('slow').delay(1000).promise().done(function(){
 			$('#balloons_flying').fadeIn('slow');
 		});
 	});
@@ -98,21 +98,21 @@ $(document).ready(function(){
 		flyBalloon('#b6');
 		flyBalloon('#b7');
 
-		$(this).fadeOut('slow').delay(4500).promise().done(function(){
+		$(this).fadeOut('slow').delay(1000).promise().done(function(){
 			$('#cake_fadein').fadeIn('slow');
 		});
 	});
 
 	$('#cake_fadein').click(function(){
 		$('.cake').fadeIn('slow');
-		$(this).fadeOut('slow').delay(2500).promise().done(function(){
+		$(this).fadeOut('slow').delay(1200).promise().done(function(){
 			$('#light_candle').fadeIn('slow');
 		});
 	});
 
 	$('#light_candle').click(function(){
 		$('.fuego').fadeIn('slow');
-		$(this).fadeOut('slow').delay(1500).promise().done(function(){
+		$(this).fadeOut('slow').delay(1000).promise().done(function(){
 			$('#wish_message').fadeIn('slow');
 		});
 	});
@@ -131,7 +131,7 @@ $(document).ready(function(){
 		$('.balloons').css({ 'bottom': 'auto', 'opacity': '0.95' });
 		positionBalloonsRow(600);
 
-		$(this).fadeOut('slow').delay(2500).promise().done(function(){
+		$(this).fadeOut('slow').delay(1200).promise().done(function(){
 			$('#story').fadeIn('slow');
 		});
 	});
