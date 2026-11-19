@@ -138,29 +138,39 @@ $(document).ready(function(){
 		var $bubbles = $('.sms-bubble');
 		var $typing = $('#sms_typing');
 		var $body = $('#sms_body');
+		var $status = $('.sms-status');
 		var idx = 0;
 
 		function showNextBubble() {
 			if (idx >= $bubbles.length) {
 				$typing.hide();
+				$status.text('● Celebrating you today');
 				setTimeout(function() {
 					$('.cake-cover').fadeIn('slow');
-				}, 1200);
+				}, 1800);
 				return;
 			}
 
+			var msgText = $bubbles.eq(idx).find('p').text();
+			// Realistic human typing duration scaled by message length (1.5s to 2.6s)
+			var typingTime = Math.min(2600, Math.max(1500, msgText.length * 24));
+			// Generous reading pause scaled by message length (2.6s to 4.2s)
+			var readPause = Math.min(4200, Math.max(2600, msgText.length * 38));
+
+			$status.text('● typing...');
 			$typing.css('display', 'inline-flex');
 			$body.scrollTop($body[0].scrollHeight);
 
 			setTimeout(function() {
 				$typing.hide();
-				$bubbles.eq(idx).fadeIn(350);
+				$status.text('● Online');
+				$bubbles.eq(idx).fadeIn(400);
 				$body.scrollTop($body[0].scrollHeight);
 				idx++;
-				setTimeout(showNextBubble, 1300);
-			}, 900);
+				setTimeout(showNextBubble, readPause);
+			}, typingTime);
 		}
 
-		setTimeout(showNextBubble, 500);
+		setTimeout(showNextBubble, 700);
 	});
 });
