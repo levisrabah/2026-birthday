@@ -820,3 +820,9 @@ audio {
 body.peach .action-bar {
 	background: linear-gradient(to top, rgba(255, 218, 185, 0.92), rgba(255, 218, 185, 0));
 }
+
+/* === Restore visible paragraph text inside SMS bubbles === */
+.sms-bubble p {
+	display: block !important;
+	color: #7a2838;
+}
