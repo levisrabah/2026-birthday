@@ -1,0 +1,431 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #000;
+	transition: background-color linear 5s;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0 0 95px 0;
+	min-height: 100vh;
+}
+
+.container.main-stage {
+	display: none;
+	max-width: 960px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.peach {
+	background-color: #FFDAB9;
+}
+
+.peach-after {
+	animation: peach_alive linear 8s infinite;
+}
+
+@keyframes peach_alive {
+	0%   { background-color: #FFDAB9; }
+	25%  { background-color: #FFE4B5; }
+	50%  { background-color: #FFDAB9; }
+	75%  { background-color: #FFEFD5; }
+	100% { background-color: #FFDAB9; }
+}
+
+/* Bulbs */
+.bulb-row {
+	margin-top: 8px;
+}
+
+.bulb-holder {
+	height: 64px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 2px;
+}
+
+.bulb {
+	width: 44px;
+	height: 44px;
+	margin: auto;
+	background-image: url('Images/bulb.png');
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: contain;
+	opacity: 0.25;
+	transition: opacity 0.6s ease;
+}
+
+.bulb-glow-yellow {
+	opacity: 1;
+	background-image: url('Images/bulb_yellow.png');
+	animation: bulb_glow_yellow linear 5s;
+}
+@keyframes bulb_glow_yellow {
+	0%   { background-image: url('Images/bulb.png'); opacity: 0.3; }
+	50%  { opacity: 1; }
+	100% { background-image: url('Images/bulb_yellow.png'); opacity: 1; }
+}
+
+.bulb-glow-red {
+	opacity: 1;
+	background-image: url('Images/bulb_red.png');
+	animation: bulb_glow_red linear 5s;
+}
+@keyframes bulb_glow_red {
+	0%   { background-image: url('Images/bulb.png'); opacity: 0.3; }
+	50%  { opacity: 1; }
+	100% { background-image: url('Images/bulb_red.png'); opacity: 1; }
+}
+
+.bulb-glow-blue {
+	opacity: 1;
+	background-image: url('Images/bulb_blue.png');
+	animation: bulb_glow_blue linear 5s;
+}
+@keyframes bulb_glow_blue {
+	0%   { background-image: url('Images/bulb.png'); opacity: 0.3; }
+	50%  { opacity: 1; }
+	100% { background-image: url('Images/bulb_blue.png'); opacity: 1; }
+}
+
+.bulb-glow-green {
+	opacity: 1;
+	background-image: url('Images/bulb_green.png');
+	animation: bulb_glow_green linear 5s;
+}
+@keyframes bulb_glow_green {
+	0%   { background-image: url('Images/bulb.png'); opacity: 0.3; }
+	50%  { opacity: 1; }
+	100% { background-image: url('Images/bulb_green.png'); opacity: 1; }
+}
+
+.bulb-glow-pink {
+	opacity: 1;
+	background-image: url('Images/bulb_pink.png');
+	animation: bulb_glow_pink linear 5s;
+}
+@keyframes bulb_glow_pink {
+	0%   { background-image: url('Images/bulb.png'); opacity: 0.3; }
+	50%  { opacity: 1; }
+	100% { background-image: url('Images/bulb_pink.png'); opacity: 1; }
+}
+
+.bulb-glow-orange {
+	opacity: 1;
+	background-image: url('Images/bulb_orange.png');
+	animation: bulb_glow_orange linear 5s;
+}
+@keyframes bulb_glow_orange {
+	0%   { background-image: url('Images/bulb.png'); opacity: 0.3; }
+	50%  { opacity: 1; }
+	100% { background-image: url('Images/bulb_orange.png'); opacity: 1; }
+}
+
+/* Blinking bulbs after music */
+.bulb-glow-yellow-after {
+	background-image: url('Images/bulb_yellow.png');
+	animation: bulb_glow_yellow_after linear 1s infinite;
+}
+@keyframes bulb_glow_yellow_after {
+	0%, 100% { background-image: url('Images/bulb.png'); }
+	50%      { background-image: url('Images/bulb_yellow.png'); }
+}
+
+.bulb-glow-red-after {
+	background-image: url('Images/bulb_red.png');
+	animation: bulb_glow_red_after linear 1.2s infinite;
+}
+@keyframes bulb_glow_red_after {
+	0%, 100% { background-image: url('Images/bulb.png'); }
+	50%      { background-image: url('Images/bulb_red.png'); }
+}
+
+.bulb-glow-blue-after {
+	background-image: url('Images/bulb_blue.png');
+	animation: bulb_glow_blue_after linear 1.4s infinite;
+}
+@keyframes bulb_glow_blue_after {
+	0%, 100% { background-image: url('Images/bulb.png'); }
+	50%      { background-image: url('Images/bulb_blue.png'); }
+}
+
+.bulb-glow-green-after {
+	background-image: url('Images/bulb_green.png');
+	animation: bulb_glow_green_after linear 1.8s infinite;
+}
+@keyframes bulb_glow_green_after {
+	0%, 100% { background-image: url('Images/bulb.png'); }
+	50%      { background-image: url('Images/bulb_green.png'); }
+}
+
+.bulb-glow-pink-after {
+	background-image: url('Images/bulb_pink.png');
+	animation: bulb_glow_pink_after linear 2s infinite;
+}
+@keyframes bulb_glow_pink_after {
+	0%, 100% { background-image: url('Images/bulb.png'); }
+	50%      { background-image: url('Images/bulb_pink.png'); }
+}
+
+.bulb-glow-orange-after {
+	background-image: url('Images/bulb_orange.png');
+	animation: bulb_glow_orange_after linear 2.2s infinite;
+}
+@keyframes bulb_glow_orange_after {
+	0%, 100% { background-image: url('Images/bulb.png'); }
+	50%      { background-image: url('Images/bulb_orange.png'); }
+}
+
+audio {
+	display: none;
+}
+
+/* Banners */
+.banner-row {
+	margin-top: 4px;
+}
+
+.bannar {
+	max-width: 85%;
+	max-height: 110px;
+	height: auto;
+	margin: 4px auto;
+	display: inline-block;
+	transform: translate(0px, -600px);
+}
+
+.bannar-come {
+	animation: bannar_come linear 6s forwards;
+	transform: translate(0px, 0px);
+}
+
+@keyframes bannar_come {
+	0%   { transform: translate(0px, -600px); }
+	33%  { transform: translate(0px, 0px) rotate(8deg); }
+	66%  { transform: translate(0px, 35px) rotate(-8deg); }
+	100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+/* Abby Portrait */
+.photo-row {
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.celebrate-img {
+	display: none;
+	width: clamp(160px, 46vw, 250px);
+	height: clamp(160px, 46vw, 250px);
+	object-fit: cover;
+	object-position: center top;
+	border-radius: 50%;
+	border: 5px solid #ffffff;
+	box-shadow: 0 12px 30px rgba(196, 81, 92, 0.35);
+	margin: 0 auto;
+}
+
+/* Balloons */
+.balloons {
+	position: fixed;
+	bottom: -220px;
+	opacity: 0.85;
+	z-index: 99;
+	width: 86px;
+	height: 158px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	pointer-events: none;
+}
+
+.balloons h4 {
+	text-transform: uppercase;
+	font-family: 'Signika', sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	text-shadow: 0 2px 6px rgba(255, 255, 255, 0.95), 0 0 2px #fff;
+	margin: -24px 0 0 0;
+	line-height: 1.1;
+}
+
+#b1, #b11 { background-image: url('Images/b1.png'); }
+#b2, #b22 { background-image: url('Images/b2.png'); }
+#b3, #b33 { background-image: url('Images/b3.png'); }
+#b4, #b44 { background-image: url('Images/b4.png'); }
+#b5, #b55 { background-image: url('Images/b5.png'); }
+#b6, #b66 { background-image: url('Images/b6.png'); }
+#b7, #b77 { background-image: url('Images/b7.png'); }
+
+.balloons-rotate-behaviour-one {
+	animation: balloons_rotate_one linear 10s infinite;
+}
+@keyframes balloons_rotate_one {
+	0%, 100% { transform: rotate(22deg); }
+	50%      { transform: rotate(-22deg); }
+}
+
+.balloons-rotate-behaviour-two {
+	animation: balloons_rotate_two linear 10s infinite;
+}
+@keyframes balloons_rotate_two {
+	0%, 100% { transform: rotate(-18deg); }
+	50%      { transform: rotate(18deg); }
+}
+
+.balloon-border {
+	position: fixed;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	opacity: 0.6;
+	z-index: 98;
+	pointer-events: none;
+}
+
+/* Cake Container - Responsive scaling */
+.cake-cover {
+	margin-top: 10px;
+	position: relative;
+	min-height: 240px;
+}
+
+.cake-wrapper {
+	position: relative;
+	height: 240px;
+}
+
+.cake {
+	top: -30px;
+	transform: scale(0.85);
+	transform-origin: top center;
+}
+
+/* Story Message */
+.message {
+	margin-top: 16px;
+	margin-bottom: 24px;
+	display: none;
+	padding: 16px;
+	background: rgba(255, 255, 255, 0.55);
+	backdrop-filter: blur(6px);
+	border-radius: 18px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.message p {
+	font-family: 'Signika', sans-serif;
+	font-size: 28px;
+	line-height: 1.4;
+	text-transform: uppercase;
+	color: #C4515C;
+	text-shadow: 1px 1px 2px #FFF;
+	display: none;
+	font-weight: 700;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	margin: 10px 0;
+}
+
+/* Bottom Action Controls */
+.action-bar {
+	background: linear-gradient(to top, rgba(255, 218, 185, 0.92), rgba(255, 218, 185, 0));
+	border: none;
+	padding: 14px 12px 18px;
+	z-index: 1000;
+}
+
+#play, #bannar_coming, #balloons_flying, #cake_fadein, #light_candle, #wish_message, #story {
+	display: none;
+}
+
+.btn-primary.action-btn {
+	border: 2px solid #fff;
+	border-radius: 50px;
+	padding: 12px 26px;
+	font-size: 15px;
+	letter-spacing: 0.6px;
+	text-transform: uppercase;
+	font-family: 'Signika', sans-serif;
+	font-weight: 700;
+	color: #fff;
+	background: linear-gradient(135deg, #466baf, #6b5ce7);
+	box-shadow: 0 6px 18px rgba(70, 107, 175, 0.45);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	max-width: 92vw;
+	white-space: normal;
+}
+
+.btn-primary.action-btn:hover,
+.btn-primary.action-btn:focus,
+.btn-primary.action-btn:active {
+	border-color: #fff;
+	color: #fff;
+	background: linear-gradient(135deg, #3a5a97, #5848d6);
+	transform: translateY(-2px);
+	box-shadow: 0 8px 22px rgba(70, 107, 175, 0.6);
+	outline: none;
+}
+
+/* Mobile Breakpoints */
+@media (max-width: 768px) {
+	.bulb-holder {
+		height: 50px;
+	}
+	.bulb {
+		width: 34px;
+		height: 34px;
+	}
+	.bannar {
+		max-width: 92%;
+		max-height: 75px;
+	}
+	.balloons {
+		width: 52px;
+		height: 96px;
+	}
+	.balloons h4 {
+		font-size: 13px;
+		margin-top: -14px;
+	}
+	.cake {
+		transform: scale(0.75);
+	}
+	.cake-wrapper {
+		height: 210px;
+	}
+	.message p {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 420px) {
+	.balloons {
+		width: 44px;
+		height: 82px;
+	}
+	.balloons h4 {
+		font-size: 11px;
+		margin-top: -12px;
+	}
+	.cake {
+		transform: scale(0.68);
+	}
+	.cake-wrapper {
+		height: 190px;
+	}
+	.message p {
+		font-size: 17px;
+	}
+	.btn-primary.action-btn {
+		padding: 11px 20px;
+		font-size: 14px;
+	}
+}

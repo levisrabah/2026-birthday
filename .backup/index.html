@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Happy Birthday Abby 💎</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
+	<meta charset="UTF-8" />
+	<meta name="description" content="Happy Birthday Abby!">
+	<meta name="robots" content="index, follow" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="loading.css">
+	<link href='https://fonts.googleapis.com/css?family=Signika:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet/less" href="cake.less">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
+</head>
+
+<body>
+	<div id="content">
+		<div class="loading"></div>
+		<audio class="song" controls loop>
+			<source src="Happy_birthday_to_you_MIDI(chosic.com).mp3" type="audio/mpeg">
+			Your browser isn't invited for super fun audio time.
+		</audio>
+
+		<!-- Floating Balloons -->
+		<div class="balloons text-center" id="b1">
+			<h4 style="color:#f8b704;">A</h4>
+		</div>
+		<div class="balloons text-center" id="b2">
+			<h4 style="color:#152ae0;">Very</h4>
+		</div>
+		<div class="balloons text-center" id="b3">
+			<h4 style="color:#f50e0e;">Happy</h4>
+		</div>
+		<div class="balloons text-center" id="b4">
+			<h4 style="color:#eff706;">Birthday</h4>
+		</div>
+		<div class="balloons text-center" id="b5">
+			<h4 style="color:#705ef6;">Abby</h4>
+		</div>
+		<div class="balloons text-center" id="b6">
+			<h4 style="color:#6cc712;">💎</h4>
+		</div>
+		<div class="balloons text-center" id="b7">
+			<h4 style="color:#0f962c;">🥳</h4>
+		</div>
+
+		<img src="Images/Balloon-Border.png" class="balloon-border" alt="Balloon Border">
+
+		<div class="container main-stage">
+			<!-- Bulbs Row -->
+			<div class="row bulb-row">
+				<div class="col-xs-2 bulb-holder">
+					<div class="bulb" id="bulb_yellow"></div>
+				</div>
+				<div class="col-xs-2 bulb-holder">
+					<div class="bulb" id="bulb_red"></div>
+				</div>
+				<div class="col-xs-2 bulb-holder">
+					<div class="bulb" id="bulb_blue"></div>
+				</div>
+				<div class="col-xs-2 bulb-holder">
+					<div class="bulb" id="bulb_green"></div>
+				</div>
+				<div class="col-xs-2 bulb-holder">
+					<div class="bulb" id="bulb_pink"></div>
+				</div>
+				<div class="col-xs-2 bulb-holder">
+					<div class="bulb" id="bulb_orange"></div>
+				</div>
+			</div>
+
+			<!-- Banners Row -->
+			<div class="row banner-row">
+				<div class="col-xs-12 text-center">
+					<img src="Images/HBD Banner.webp" class="bannar" alt="Happy Birthday Banner">
+					<img src="Images/HBD 2 Banner.webp" class="bannar" alt="Happy Birthday Banner 2">
+				</div>
+			</div>
+
+			<!-- Abby's Portrait -->
+			<div class="row photo-row">
+				<div class="col-xs-12 text-center">
+					<img src="Images/Abbie.jpeg" class="celebrate-img" alt="Abby">
+				</div>
+			</div>
+
+			<!-- Cake Section -->
+			<div class="row cake-cover">
+				<div class="col-xs-12 text-center cake-wrapper">
+					<div class="cake">
+					  <div class="velas">
+						<div class="fuego"></div>
+						<div class="fuego"></div>
+						<div class="fuego"></div>
+						<div class="fuego"></div>
+						<div class="fuego"></div>
+					  </div>
+					  <div class="cobertura"></div>
+					  <div class="bizcocho"></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Birthday Message Story -->
+			<div class="row message">
+				<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+					<p>On this special day...</p>
+					<p>as radiant as the rest,</p>
+					<p>you realize</p>
+					<p>yet another year has gracefully passed.</p>
+					<p>In the blink of an eye,</p>
+					<p><strong>however,</strong></p>
+					<p>Do you feel...?</p>
+					<p>Today is uniquely extraordinary,</p>
+					<p>exclusively yours.</p>
+					<p>That's why ntasema ...</p>
+					<p>Heri Njema ya kuzaliwa Baby Abby 🥳💎</p>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Fixed Bottom Action Bar -->
+		<div class="navbar navbar-fixed-bottom action-bar">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12 text-center">
+						<button class="btn btn-primary action-btn" id="turn_on">Turn On Lights</button>
+						<button class="btn btn-primary action-btn" id="play">Play Music</button>
+						<button class="btn btn-primary action-btn" id="bannar_coming">Let's Decorate</button>
+						<button class="btn btn-primary action-btn" id="balloons_flying">Fly With Balloons</button>
+						<button class="btn btn-primary action-btn" id="cake_fadein">Most Delicious Cake Ever</button>
+						<button class="btn btn-primary action-btn" id="light_candle">Light Candle</button>
+						<button class="btn btn-primary action-btn" id="wish_message">Happy Birthday</button>
+						<button class="btn btn-primary action-btn" id="story">A Message For You</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="effect.js"></script>
+</html>
