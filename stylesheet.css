@@ -766,3 +766,22 @@ audio {
 		padding: 12px 22px;
 	}
 }
+
+/* === Direct Portrait Animation & Two-Line Final Wish === */
+.celebrate-img {
+	display: none !important;
+	width: clamp(168px, 46vw, 240px);
+	height: clamp(168px, 46vw, 240px);
+	object-fit: cover;
+	object-position: center top;
+	border-radius: 50%;
+	border: 5px solid #fffaf5;
+	margin: 0 auto;
+	animation: portraitFloat 4.5s ease-in-out infinite, auraGlow 3.2s ease-in-out infinite alternate;
+}
+
+.wish-sub {
+	display: inline-block;
+	margin-top: 4px;
+	font-size: 34px;
+}

@@ -38,7 +38,7 @@ $(document).ready(function(){
 		$('#bulb_pink').addClass('bulb-glow-pink');
 		$('#bulb_orange').addClass('bulb-glow-orange');
 		$('body').addClass('peach');
-		$('.portrait-frame').fadeIn(1500);
+		$('.celebrate-img').fadeIn(1500);
 		$(this).fadeOut('slow').delay(4000).promise().done(function(){
 			$('#play').fadeIn('slow');
 		});
@@ -47,6 +47,13 @@ $(document).ready(function(){
 	$('#play').click(function(){
 		var audio = $('.song')[0];
 		audio.play();
+		if ('mediaSession' in navigator) {
+			navigator.mediaSession.metadata = new MediaMetadata({
+				title: 'Happy 21st Birthday Abby',
+				artist: 'Chapter 21',
+				artwork: [{ src: 'Images/Abbie.jpeg', sizes: '512x512', type: 'image/jpeg' }]
+			});
+		}
 		$('#bulb_yellow').addClass('bulb-glow-yellow-after');
 		$('#bulb_red').addClass('bulb-glow-red-after');
 		$('#bulb_blue').addClass('bulb-glow-blue-after');
