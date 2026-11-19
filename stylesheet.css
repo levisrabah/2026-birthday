@@ -769,7 +769,7 @@ audio {
 
 /* === Direct Portrait Animation & Two-Line Final Wish === */
 .celebrate-img {
-	display: none !important;
+	display: none;
 	width: clamp(168px, 46vw, 240px);
 	height: clamp(168px, 46vw, 240px);
 	object-fit: cover;
