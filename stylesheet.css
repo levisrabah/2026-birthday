@@ -807,3 +807,16 @@ audio {
 	margin-top: 12px;
 	margin-bottom: 30px;
 }
+
+/* === Keep screen pure dark & portrait hidden until Turn On Lights === */
+.celebrate-img {
+	display: none;
+}
+
+.action-bar {
+	background: transparent;
+}
+
+body.peach .action-bar {
+	background: linear-gradient(to top, rgba(255, 218, 185, 0.92), rgba(255, 218, 185, 0));
+}
